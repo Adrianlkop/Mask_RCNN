@@ -2498,9 +2498,9 @@ class MaskRCNN():
             layers = layer_regex[layers]
 
         # Data generators
-        train_generator = DataGenerator(train_dataset, self.config, shuffle=True, augmentation=augmentation, batch_size=self.config.BATCH_SIZE)
-      	val_generator = DataGenerator(val_dataset, self.config, shuffle=True, batch_size=self.config.BATCH_SIZE)
-        # Create log_dir if it does not exist
+	train_generator = DataGenerator(train_dataset, self.config, shuffle=True, augmentation=augmentation, batch_size=self.config.BATCH_SIZE)
+	val_generator = DataGenerator(val_dataset, self.config, shuffle=True, batch_size=self.config.BATCH_SIZE)
+	# Create log_dir if it does not exist
         if not os.path.exists(self.log_dir):
             os.makedirs(self.log_dir)
 
